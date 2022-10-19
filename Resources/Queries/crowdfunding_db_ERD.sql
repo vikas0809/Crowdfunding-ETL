@@ -12,8 +12,8 @@ country VARCHAR(20)
 currency VARCHAR(10)
 launched_date DATE
 end_date DATE
-category_id VARCHAR(10) FK - category.category_id
-subcategory_id VARCHAR(10) FK - subcategory.subcategory_id
+category_id VARCHAR(10) FK >- category.category_id
+subcategory_id VARCHAR(10) FK >- subcategory.subcategory_id
 
 category
 -
@@ -35,6 +35,7 @@ email VARCHAR(100)
 backers
 -
 backer_id PK varchar(5)
-cf_id FK - campaign.cf_id
+cf_id FK >- campaign.cf_id
 first_name varchar(50)
-lst_name varchar(50)
+last_name varchar(50)
+email varchar(100)

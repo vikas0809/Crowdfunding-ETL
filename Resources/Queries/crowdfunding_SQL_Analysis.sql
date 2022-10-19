@@ -24,7 +24,7 @@ ORDER BY "backer_count" DESC;
 -- and the amount left to reach the goal for all "live" projects in descending order. 
 
 SELECT ct.first_name,ct.last_name,ct.email,cmp.goal-cmp.pledged as "Amount_Left"
-INTO live_campaigns_contacts
+INTO email_contacts_remaining_goal_amount
 FROM contacts as ct
 INNER JOIN campaign as cmp
 ON ct.contact_id=cmp.contact_id
@@ -33,7 +33,7 @@ ORDER BY "Amount_Left" DESC;
 
 -- Check the table
 
-SELECT * FROM live_campaigns_contacts;
+SELECT * FROM email_contacts_remaining_goal_amount;
 
 -- 4. (5 pts)
 -- Create a table, "email_backers_remaining_goal_amount" that contains the email address of each backer in descending order, 
